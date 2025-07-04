@@ -108,6 +108,10 @@ def dotenv_rendered_template_path(
     
     dotenv_template_params["ENABLE_CHAT_HISTORY"] = enable_chat_history
     dotenv_template_params["AZURE_OPENAI_STREAM"] = stream
+    dotenv_template_params["AZURE_OPENAI_ENDPOINT"] = os.getenv("AZURE_OPENAI_ENDPOINT", "https://YOUR-OPENAI-ENDPOINT")
+    dotenv_template_params["AZURE_OPENAI_KEY"] = os.getenv("AZURE_OPENAI_KEY", "YOUR-OPENAI-KEY")
+    dotenv_template_params["AZURE_OPENAI_MODEL"] = os.getenv("AZURE_OPENAI_MODEL", "YOUR-OPENAI-MODEL")
+
     
     return render_template_to_tempfile(
         rendered_template_name,
