@@ -111,6 +111,7 @@ def dotenv_rendered_template_path(
     dotenv_template_params["AZURE_OPENAI_ENDPOINT"] = os.getenv("AZURE_OPENAI_ENDPOINT", "https://YOUR-OPENAI-ENDPOINT")
     dotenv_template_params["AZURE_OPENAI_KEY"] = os.getenv("AZURE_OPENAI_KEY", "YOUR-OPENAI-KEY")
     dotenv_template_params["AZURE_OPENAI_MODEL"] = os.getenv("AZURE_OPENAI_MODEL", "YOUR-OPENAI-MODEL")
+    dotenv_template_params["AZURE_OPENAI_EMBEDDING_NAME"] = os.getenv("AZURE_OPENAI_EMBEDDING_NAME", "text-embedding-ada-002")
 
     
     return render_template_to_tempfile(
